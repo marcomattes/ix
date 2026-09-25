@@ -1,3 +1,40 @@
+diff --git a/internal/client/index.js b/internal/client/index.js
+index 618869d33d53763792fefed6130ffc6e11146afa..a5e7cac315f444ca7dc020c27f889ba2c0b98db0 100644
+--- a/internal/client/index.js
++++ b/internal/client/index.js
+@@ -2407,7 +2407,12 @@ var setAccessor = (elm, memberName, oldValue, newValue, isSvg, flags, initialRen
+       newClasses = [...new Set(newClasses)].filter((c) => c);
+       classList.add(...newClasses);
+     } else {
+-      classList.remove(...oldClasses.filter((c) => c && !newClasses.includes(c)));
++      let removedClasses = oldClasses.filter((c) => c && !newClasses.includes(c));
++      if (BUILD18.hydrateClientSide && initialRender && !(flags & 4 /* isHost */)) {
++        const ownClasses = getOwnHostClasses(elm);
++        removedClasses = removedClasses.filter((c) => !ownClasses.includes(c));
++      }
++      classList.remove(...removedClasses);
+       classList.add(...newClasses.filter((c) => c && !oldClasses.includes(c)));
+     }
+   } else if (BUILD18.vdomStyle && memberName === "style") {
+@@ -2531,6 +2536,18 @@ var setAccessor = (elm, memberName, oldValue, newValue, isSvg, flags, initialRen
+   }
+ };
+ var parseClassListRegex = /\s/;
++var getOwnHostClasses = (elm) => {
++  var _a, _b, _c;
++  const hostRef = getHostRef(elm);
++  if (!hostRef || !(hostRef.$flags$ & 2 /* hasRendered */)) {
++    return [];
++  }
++  const ownClasses = parseClassList((_b = (_a = hostRef.$vnode$) == null ? void 0 : _a.$attrs$) == null ? void 0 : _b.class);
++  if (BUILD18.hydratedClass) {
++    ownClasses.push((_c = BUILD18.hydratedSelectorName) != null ? _c : "hydrated");
++  }
++  return ownClasses;
++};
+ var parseClassList = (value) => {
+   if (typeof value === "object" && value && "baseVal" in value) {
+     value = value.baseVal;
 diff --git a/internal/stencil-ext-modules.d.ts b/internal/stencil-ext-modules.d.ts
 index ffec762996cf94678a4b8547bb64844cc3ed4df6..5b1f3157029c98717a1f5f175fed270284d2b4e2 100644
 --- a/internal/stencil-ext-modules.d.ts

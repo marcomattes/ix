@@ -1,5 +1,10 @@
 # Stencil Core Patch
 
+The patch changes two things in `@stencil/core`:
+
+1. [CSS module declaration](#why-this-patch-exists): comments out the broad `*.css` module declaration in `internal/stencil-ext-modules.d.ts`.
+2. [Host classes after hydration](#host-classes-after-hydration): keeps the host classes of child components on the first client render after server-side rendering, in `internal/client/index.js`.
+
 ## Why This Patch Exists
 
 This patch modifies `@stencil/core@4.38.3` to comment out the broad `*.css` module declaration in `internal/stencil-ext-modules.d.ts`.
@@ -37,3 +42,17 @@ If you want to avoid patches entirely, the only option is to:
 
 - Stencil issue: https://github.com/ionic-team/stencil/issues/3315
 - Related pnpm monorepo type issues with Stencil
+
+## Host Classes After Hydration
+
+### The Problem
+
+When a page rendered with `@siemens/ix/hydrate` hydrates on the client, Stencil seeds the old vnode of every child element with the element's full server `className`. With the custom elements build, a child component (e.g. `ix-dropdown-item`) is defined, hydrated and rendered before its parent (e.g. `ix-select-item`). On the parent's first render, `setAccessor` then removes every class the parent does not set itself, including the classes the child set on its own host (`disabled`, `ix-focusable`) and the `hydrated` flag. Nothing adds them again, so e.g. a disabled `ix-select-item` looks enabled.
+
+### What This Patch Does
+
+On the first render after hydration, `setAccessor` keeps the classes that an already rendered child component set on its own `<Host>`, and its hydrated flag. Classes the parent rendered on the server but not on the client are still removed.
+
+### Removal
+
+The same change is proposed for Stencil in `src/runtime/vdom/set-accessor.ts`. Remove this part of the patch once IX depends on a Stencil release that contains it.
