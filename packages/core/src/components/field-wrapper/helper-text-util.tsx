@@ -15,6 +15,13 @@ import {
 } from '@siemens/ix-icons/icons';
 import { a11yBoolean } from '../utils/a11y';
 
+/**
+ * CSS parts of `ix-field-wrapper` that form components forward to their own host
+ * via `exportparts`.
+ */
+export const fieldWrapperExportParts =
+  'label, required-indicator, helper-text, helper-text-icon';
+
 export function hasAnyText({
   invalidText,
   isInvalid,
@@ -98,11 +105,13 @@ export function HelperText(
       <ix-typography
         textColor="alarm"
         class="bottom-text"
+        part="helper-text"
         format="body-paragraph"
       >
         <ix-icon
           aria-hidden={a11yBoolean(!!props.invalidText)}
           class="text-icon invalid"
+          part="helper-text-icon"
           name={iconError}
           size="16"
         ></ix-icon>
@@ -116,11 +125,13 @@ export function HelperText(
       <ix-typography
         textColor="std"
         class="bottom-text"
+        part="helper-text"
         format="body-paragraph"
       >
         <ix-icon
           aria-hidden={a11yBoolean(!!props.warningText)}
           class="text-icon warning"
+          part="helper-text-icon"
           name={iconWarning}
           size="16"
         ></ix-icon>
@@ -134,11 +145,13 @@ export function HelperText(
       <ix-typography
         textColor="std"
         class="bottom-text"
+        part="helper-text"
         format="body-paragraph"
       >
         <ix-icon
           aria-hidden={a11yBoolean(!!props.infoText)}
           class="text-icon info"
+          part="helper-text-icon"
           name={iconInfo}
           size="16"
         ></ix-icon>
@@ -152,11 +165,13 @@ export function HelperText(
       <ix-typography
         textColor="std"
         class="bottom-text"
+        part="helper-text"
         format="body-paragraph"
       >
         <ix-icon
           aria-hidden={a11yBoolean(!!props.validText)}
           class="text-icon valid"
+          part="helper-text-icon"
           name={iconSuccess}
           size="16"
         ></ix-icon>
@@ -170,6 +185,7 @@ export function HelperText(
     props.helperText.trim() !== '' && (
       <ix-typography
         class="bottom-text"
+        part="helper-text"
         format="body-paragraph"
         textColor="soft"
       >

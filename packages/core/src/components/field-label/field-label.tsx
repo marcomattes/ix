@@ -21,6 +21,8 @@ import { closestPassShadow } from '../utils/shadow-dom';
 
 /**
  * @slot default - Field label content.
+ * @part label - Label text.
+ * @part required-indicator - Asterisk shown when the field is required.
  */
 @Component({
   tag: 'ix-field-label',
@@ -214,9 +216,10 @@ export class FormFieldLabel implements IxComponentInterface {
           <ix-typography
             textColor={this.isInvalid ? 'alarm' : 'soft'}
             format="body"
+            part="label"
           >
             <slot></slot>
-            {this.required && <span>*</span>}
+            {this.required && <span part="required-indicator">*</span>}
           </ix-typography>
         </label>
       </Host>

@@ -29,6 +29,9 @@ import {
 /**
  * @form-ready
  * @slot default - Radio button label.
+ * @part control - Circle that shows the checked state.
+ * @part checkmark - Dot inside the circle when checked.
+ * @part label - Label text.
  */
 @Component({
   tag: 'ix-radio',
@@ -216,6 +219,7 @@ export class Radio implements IxFormComponent<string> {
           <div class="radio-button">
             <div
               aria-hidden="true"
+              part="control"
               class={{
                 ['radio-checkmark']: true,
                 checked: this.checked,
@@ -223,12 +227,14 @@ export class Radio implements IxFormComponent<string> {
             >
               <div
                 class="checkmark"
+                part="checkmark"
                 style={{ visibility: this.checked ? 'visible' : 'hidden' }}
               ></div>
             </div>
           </div>
           {this.label && (
             <ix-typography
+              part="label"
               format="body"
               textColor={this.disabled ? 'weak' : 'std'}
             >

@@ -196,3 +196,28 @@ regressionTest(
     await expect(radio).not.toHaveAttribute('disabled');
   }
 );
+
+regressionTest('exposes CSS parts', async ({ mount, page }) => {
+  await mount(`<ix-radio label="Label" checked></ix-radio>`);
+  await expect(page.locator('ix-radio')).toHaveClass(/hydrated/);
+  await page.addStyleTag({
+    content: `
+      ix-radio::part(control) { opacity: 0.11; }
+      ix-radio::part(checkmark) { opacity: 0.12; }
+      ix-radio::part(label) { color: rgb(1, 2, 3); }
+    `,
+  });
+
+  await expect(page.locator('ix-radio [part~="control"]').first()).toHaveCSS(
+    'opacity',
+    '0.11'
+  );
+  await expect(page.locator('ix-radio [part~="checkmark"]').first()).toHaveCSS(
+    'opacity',
+    '0.12'
+  );
+  await expect(page.locator('ix-radio [part~="label"]').first()).toHaveCSS(
+    'color',
+    'rgb(1, 2, 3)'
+  );
+});

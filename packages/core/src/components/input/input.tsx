@@ -27,6 +27,7 @@ import {
   IxInputFieldComponent,
   ValidationResults,
 } from '../utils/input';
+import { fieldWrapperExportParts } from '../field-wrapper/helper-text-util';
 import { makeRef } from '../utils/make-ref';
 import { InputElement, SlotEnd, SlotStart } from './input.fc';
 import {
@@ -48,6 +49,11 @@ let inputIds = 0;
  * @form-ready
  * @slot start - Element will be displayed at the start of the input
  * @slot end - Element will be displayed at the end of the input
+ * @part input - Native input element.
+ * @part label - Label text.
+ * @part required-indicator - Asterisk shown when the field is required.
+ * @part helper-text - Helper, info, warning, valid or invalid text below the field.
+ * @part helper-text-icon - Icon in front of an info, warning, valid or invalid text.
  */
 @Component({
   tag: 'ix-input',
@@ -300,6 +306,7 @@ export class Input implements IxInputFieldComponent<string> {
         }}
       >
         <ix-field-wrapper
+          exportparts={fieldWrapperExportParts}
           required={this.required}
           label={this.label}
           helperText={this.helperText}

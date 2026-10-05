@@ -176,3 +176,33 @@ regressionTest(
     await expect(toggle).toHaveJSProperty('checked', false);
   }
 );
+
+regressionTest('exposes CSS parts', async ({ mount, page }) => {
+  await mount(`<ix-toggle checked></ix-toggle>`);
+  await expect(page.locator('ix-toggle')).toHaveClass(/hydrated/);
+  await page.addStyleTag({
+    content: `
+      ix-toggle::part(control) { opacity: 0.11; }
+      ix-toggle::part(track) { opacity: 0.12; }
+      ix-toggle::part(thumb) { opacity: 0.13; }
+      ix-toggle::part(label) { color: rgb(1, 2, 3); }
+    `,
+  });
+
+  await expect(page.locator('ix-toggle [part~="control"]').first()).toHaveCSS(
+    'opacity',
+    '0.11'
+  );
+  await expect(page.locator('ix-toggle [part~="track"]').first()).toHaveCSS(
+    'opacity',
+    '0.12'
+  );
+  await expect(page.locator('ix-toggle [part~="thumb"]').first()).toHaveCSS(
+    'opacity',
+    '0.13'
+  );
+  await expect(page.locator('ix-toggle [part~="label"]').first()).toHaveCSS(
+    'color',
+    'rgb(1, 2, 3)'
+  );
+});

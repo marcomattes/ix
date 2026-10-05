@@ -9,6 +9,10 @@ import {
 import { HelperText as HelperTextUtil } from '../field-wrapper/helper-text-util';
 import { IxComponentInterface } from '../utils/internal';
 
+/**
+ * @part helper-text - Helper, info, warning, valid or invalid text.
+ * @part helper-text-icon - Icon in front of an info, warning, valid or invalid text.
+ */
 @Component({
   tag: 'ix-helper-text',
   styleUrl: 'helper-text.scss',

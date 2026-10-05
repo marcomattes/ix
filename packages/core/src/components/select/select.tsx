@@ -56,6 +56,7 @@ import {
   ComponentIdMixin,
   ComponentIdMixinContract,
 } from '../utils/internal/mixins/id.mixin';
+import { fieldWrapperExportParts } from '../field-wrapper/helper-text-util';
 import { makeRef } from '../utils/make-ref';
 import { requestAnimationFrameNoNgZone } from '../utils/requestAnimationFrame';
 
@@ -64,6 +65,14 @@ let selectId = 0;
 /**
  * @form-ready
  * @slot default - Select items.
+ * @part control - Field box with border and background around the input, chips and buttons.
+ * @part input - Native input element.
+ * @part dropdown-button - Button that opens and closes the dropdown.
+ * @part dropdown - Dropdown with the select items.
+ * @part label - Label text.
+ * @part required-indicator - Asterisk shown when the field is required.
+ * @part helper-text - Helper, info, warning, valid or invalid text below the field.
+ * @part helper-text-icon - Icon in front of an info, warning, valid or invalid text.
  */
 @Component({
   tag: 'ix-select',
@@ -1466,6 +1475,7 @@ export class Select
         tabIndex={this.disabled ? -1 : 0}
       >
         <ix-field-wrapper
+          exportparts={fieldWrapperExportParts}
           required={this.required}
           label={this.label}
           helperText={this.helperText}
@@ -1481,6 +1491,7 @@ export class Select
           controlRef={this.inputRef}
         >
           <div
+            part="control"
             class={{
               select: true,
               disabled: this.disabled,
@@ -1497,6 +1508,7 @@ export class Select
                 <div class="trigger">
                   <input
                     id={`${this.hostId}-input`}
+                    part="input"
                     role="combobox"
                     aria-controls={`${this.hostId}-proxy-listbox`}
                     aria-expanded={a11yBoolean(this.dropdownShow)}
@@ -1564,6 +1576,7 @@ export class Select
                       }}
                       data-select-dropdown
                       key="dropdown"
+                      part="dropdown-button"
                       class={{ 'dropdown-visible': this.dropdownShow }}
                       icon={
                         this.dropdownShow
@@ -1580,6 +1593,7 @@ export class Select
         </ix-field-wrapper>
         <ix-dropdown
           id={`${this.hostId}-listbox`}
+          part="dropdown"
           keyboardActivationKeys={['ArrowUp', 'ArrowDown']}
           keyboardItemTriggerKeys={['Enter']}
           disableFocusTrap
