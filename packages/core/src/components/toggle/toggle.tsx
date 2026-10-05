@@ -30,6 +30,10 @@ import { HookValidationLifecycle, IxFormComponent } from '../utils/input';
 
 /**
  * @form-ready
+ * @part control - Container of the track and the thumb.
+ * @part track - Track the thumb moves along.
+ * @part thumb - Thumb that shows the checked state.
+ * @part label - Label text.
  */
 @Component({
   tag: 'ix-toggle',
@@ -229,6 +233,7 @@ export class Toggle
       >
         <div class="wrapper">
           <div
+            part="control"
             class={{
               switch: true,
               checked: this.checked,
@@ -236,10 +241,12 @@ export class Toggle
             }}
             aria-hidden="true"
           >
-            <div class="slider"></div>
+            <div class="slider" part="track">
+              <div class="thumb" part="thumb"></div>
+            </div>
           </div>
           {!this.hideText && (
-            <ix-typography class="label" aria-hidden="true">
+            <ix-typography class="label" part="label" aria-hidden="true">
               {toggleText}
             </ix-typography>
           )}

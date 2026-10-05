@@ -29,7 +29,13 @@ import {
   ComponentIdMixinContract,
 } from '../utils/internal/mixins/id.mixin';
 
-/** @internal */
+/**
+ * @internal
+ * @part label - Label text.
+ * @part required-indicator - Asterisk shown when the field is required.
+ * @part helper-text - Helper, info, warning, valid or invalid text below the field.
+ * @part helper-text-icon - Icon in front of an info, warning, valid or invalid text.
+ */
 @Component({
   tag: 'ix-field-wrapper',
   styleUrl: 'field-wrapper.scss',
@@ -229,6 +235,7 @@ export class FieldWrapper
         {this.label && (
           <div class="field-top">
             <ix-field-label
+              exportparts="label, required-indicator"
               required={this.required}
               controlRef={this.controlRef}
               isInvalid={this.isInvalid}

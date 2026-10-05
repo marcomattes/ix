@@ -1764,3 +1764,42 @@ test('does not emit unhandled rejection when select is unmounted during validati
 
   expect([...inputNotFoundErrors, ...injected]).toEqual([]);
 });
+
+test('exposes CSS parts', async ({ mount, page }) => {
+  await mount(
+    `<ix-select label="Label" helper-text="Helper" required><ix-select-item value="1" label="Item 1"></ix-select-item></ix-select>`
+  );
+  await expect(page.locator('ix-select')).toHaveClass(/hydrated/);
+  await page.addStyleTag({
+    content: `
+      ix-select::part(control) { opacity: 0.11; }
+      ix-select::part(input) { opacity: 0.12; }
+      ix-select::part(dropdown-button) { opacity: 0.13; }
+      ix-select::part(required-indicator) { opacity: 0.14; }
+      ix-select::part(helper-text) { opacity: 0.15; }
+      ix-select::part(label) { color: rgb(1, 2, 3); }
+    `,
+  });
+
+  await expect(page.locator('ix-select [part~="control"]').first()).toHaveCSS(
+    'opacity',
+    '0.11'
+  );
+  await expect(page.locator('ix-select [part~="input"]').first()).toHaveCSS(
+    'opacity',
+    '0.12'
+  );
+  await expect(
+    page.locator('ix-select [part~="dropdown-button"]').first()
+  ).toHaveCSS('opacity', '0.13');
+  await expect(
+    page.locator('ix-select [part~="required-indicator"]').first()
+  ).toHaveCSS('opacity', '0.14');
+  await expect(
+    page.locator('ix-select [part~="helper-text"]').first()
+  ).toHaveCSS('opacity', '0.15');
+  await expect(page.locator('ix-select [part~="label"]').first()).toHaveCSS(
+    'color',
+    'rgb(1, 2, 3)'
+  );
+});

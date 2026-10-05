@@ -25,6 +25,7 @@ import {
   IxInputFieldComponent,
   ValidationResults,
 } from '../utils/input';
+import { fieldWrapperExportParts } from '../field-wrapper/helper-text-util';
 import { makeRef } from '../utils/make-ref';
 import { TextareaElement } from './input.fc';
 import {
@@ -41,6 +42,11 @@ let sequentialInstanceId = 0;
 
 /**
  * @form-ready
+ * @part textarea - Native textarea element.
+ * @part label - Label text.
+ * @part required-indicator - Asterisk shown when the field is required.
+ * @part helper-text - Helper, info, warning, valid or invalid text below the field.
+ * @part helper-text-icon - Icon in front of an info, warning, valid or invalid text.
  */
 @Component({
   tag: 'ix-textarea',
@@ -358,6 +364,7 @@ export class Textarea implements IxInputFieldComponent<string> {
         }}
       >
         <ix-field-wrapper
+          exportparts={fieldWrapperExportParts}
           required={this.required}
           label={this.label}
           helperText={this.helperText}

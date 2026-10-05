@@ -29,6 +29,9 @@ import { hasSlottedContent } from '../utils/shadow-dom';
 /**
  * @form-ready
  * @slot default - Checkbox label.
+ * @part control - Box that shows the checked state.
+ * @part checkmark - Check mark or indeterminate mark inside the box.
+ * @part label - Label text.
  */
 @Component({
   tag: 'ix-checkbox',
@@ -169,6 +172,7 @@ export class Checkbox implements IxFormComponent<string> {
   private renderCheckmark() {
     return (
       <svg
+        part="checkmark"
         width="18"
         height="18"
         viewBox="0 0 18 18"
@@ -226,6 +230,7 @@ export class Checkbox implements IxFormComponent<string> {
           />
           <div class="checkbox-button">
             <button
+              part="control"
               disabled={this.disabled}
               class={{
                 checked: this.checked,
@@ -236,6 +241,7 @@ export class Checkbox implements IxFormComponent<string> {
             </button>
           </div>
           <ix-typography
+            part="label"
             format="body"
             textColor={this.disabled ? 'weak' : 'std'}
           >

@@ -38,6 +38,7 @@ export function TextareaElement(
   return (
     <textarea
       id={props.id}
+      part="textarea"
       readOnly={props.readonly}
       disabled={props.disabled}
       maxLength={props.maxLength}
@@ -103,6 +104,7 @@ export function InputElement(
   return (
     <input
       id={props.id}
+      part="input"
       autoComplete="off"
       readOnly={props.readonly}
       disabled={props.disabled}

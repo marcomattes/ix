@@ -1913,7 +1913,11 @@
       "slots": [
         "default"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "checkmark",
+        "control",
+        "label"
+      ],
       "cssStates": []
     },
     {
@@ -4648,7 +4652,10 @@
       "slots": [
         "default"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "label",
+        "required-indicator"
+      ],
       "cssStates": []
     },
     {
@@ -5113,7 +5120,10 @@
       "events": [],
       "cssProperties": [],
       "slots": [],
-      "cssParts": [],
+      "cssParts": [
+        "helper-text",
+        "helper-text-icon"
+      ],
       "cssStates": []
     },
     {
@@ -5668,7 +5678,13 @@
         "end",
         "start"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "helper-text",
+        "helper-text-icon",
+        "input",
+        "label",
+        "required-indicator"
+      ],
       "cssStates": []
     },
     {
@@ -7437,7 +7453,13 @@
         "end",
         "start"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "helper-text",
+        "helper-text-icon",
+        "input",
+        "label",
+        "required-indicator"
+      ],
       "cssStates": []
     },
     {
@@ -8506,7 +8528,11 @@
       "slots": [
         "default"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "checkmark",
+        "control",
+        "label"
+      ],
       "cssStates": []
     },
     {
@@ -9035,7 +9061,16 @@
       "slots": [
         "default"
       ],
-      "cssParts": [],
+      "cssParts": [
+        "control",
+        "dropdown",
+        "dropdown-button",
+        "helper-text",
+        "helper-text-icon",
+        "input",
+        "label",
+        "required-indicator"
+      ],
       "cssStates": []
     },
     {
@@ -9935,7 +9970,13 @@
       ],
       "cssProperties": [],
       "slots": [],
-      "cssParts": [],
+      "cssParts": [
+        "helper-text",
+        "helper-text-icon",
+        "label",
+        "required-indicator",
+        "textarea"
+      ],
       "cssStates": []
     },
     {
@@ -10934,7 +10975,12 @@
       ],
       "cssProperties": [],
       "slots": [],
-      "cssParts": [],
+      "cssParts": [
+        "control",
+        "label",
+        "thumb",
+        "track"
+      ],
       "cssStates": []
     },
     {

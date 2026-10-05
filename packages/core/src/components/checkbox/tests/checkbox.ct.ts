@@ -165,3 +165,27 @@ test.describe('accessibility', () => {
     await expect(checkbox).toHaveAttribute('aria-checked', 'true');
   });
 });
+
+regressionTest('exposes CSS parts', async ({ mount, page }) => {
+  await mount(`<ix-checkbox label="Label" checked></ix-checkbox>`);
+  await expect(page.locator('ix-checkbox')).toHaveClass(/hydrated/);
+  await page.addStyleTag({
+    content: `
+      ix-checkbox::part(control) { opacity: 0.11; }
+      ix-checkbox::part(checkmark) { opacity: 0.12; }
+      ix-checkbox::part(label) { color: rgb(1, 2, 3); }
+    `,
+  });
+
+  await expect(page.locator('ix-checkbox [part~="control"]').first()).toHaveCSS(
+    'opacity',
+    '0.11'
+  );
+  await expect(
+    page.locator('ix-checkbox [part~="checkmark"]').first()
+  ).toHaveCSS('opacity', '0.12');
+  await expect(page.locator('ix-checkbox [part~="label"]').first()).toHaveCSS(
+    'color',
+    'rgb(1, 2, 3)'
+  );
+});

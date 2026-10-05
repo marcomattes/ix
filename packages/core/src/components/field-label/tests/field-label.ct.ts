@@ -228,3 +228,21 @@ regressionTest(
     );
   }
 );
+
+regressionTest('exposes CSS parts', async ({ mount, page }) => {
+  await mount(`<ix-field-label required>Label</ix-field-label>`);
+  await expect(page.locator('ix-field-label')).toHaveClass(/hydrated/);
+  await page.addStyleTag({
+    content: `
+      ix-field-label::part(required-indicator) { opacity: 0.11; }
+      ix-field-label::part(label) { color: rgb(1, 2, 3); }
+    `,
+  });
+
+  await expect(
+    page.locator('ix-field-label [part~="required-indicator"]').first()
+  ).toHaveCSS('opacity', '0.11');
+  await expect(
+    page.locator('ix-field-label [part~="label"]').first()
+  ).toHaveCSS('color', 'rgb(1, 2, 3)');
+});
