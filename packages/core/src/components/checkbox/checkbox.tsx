@@ -121,6 +121,7 @@ export class Checkbox implements IxFormComponent<string> {
 
   componentWillLoad() {
     this.updateFormInternalValue();
+    this.hasDefaultSlotElements = this.hasDefaultSlotChildren();
   }
 
   componentDidLoad() {
@@ -129,6 +130,23 @@ export class Checkbox implements IxFormComponent<string> {
 
   private updateDefaultSlotElements() {
     this.hasDefaultSlotElements = hasSlottedContent(this.defaultSlotElement);
+  }
+
+  /**
+   * The slot does not exist before the first render, so read the children that the
+   * default slot will receive. Otherwise the first render hides a slotted label.
+   */
+  private hasDefaultSlotChildren() {
+    return Array.from(this.hostElement.childNodes).some((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        return !(node as Element).hasAttribute('slot');
+      }
+
+      return (
+        node.nodeType === Node.TEXT_NODE &&
+        (node.textContent ?? '').trim().length > 0
+      );
+    });
   }
 
   private get isLabelLess() {

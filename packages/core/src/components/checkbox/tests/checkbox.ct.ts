@@ -106,12 +106,46 @@ regressionTest(
       `<ix-checkbox name="slot-label">Custom slot label text</ix-checkbox>`
     );
     const checkbox = page.locator('ix-checkbox');
+    await expect(checkbox).toHaveClass(/hydrated/);
     await expect(checkbox).not.toHaveClass(/label-less/);
     await expect(checkbox).toHaveText(/Custom slot label text/);
     const width = await checkbox.evaluate((element) =>
       Number.parseFloat(getComputedStyle(element).width)
     );
     expect(width).toBeGreaterThan(24);
+  }
+);
+
+regressionTest(
+  'default slot label is not label-less on the first render',
+  async ({ mount, page }) => {
+    await page.evaluate(() => {
+      const classes: string[] = [];
+      (window as unknown as { checkboxClasses: string[] }).checkboxClasses =
+        classes;
+      new MutationObserver((records) => {
+        for (const record of records) {
+          const target = record.target as Element;
+          if (target.tagName === 'IX-CHECKBOX') {
+            classes.push(target.className);
+          }
+        }
+      }).observe(document.body, {
+        attributes: true,
+        attributeFilter: ['class'],
+        subtree: true,
+      });
+    });
+
+    await mount(
+      `<ix-checkbox name="slot-label">Custom slot label text</ix-checkbox>`
+    );
+    await expect(page.locator('ix-checkbox')).toHaveClass(/hydrated/);
+
+    const classes = await page.evaluate(
+      () => (window as unknown as { checkboxClasses: string[] }).checkboxClasses
+    );
+    expect(classes.filter((value) => value.includes('label-less'))).toEqual([]);
   }
 );
 
@@ -130,7 +164,7 @@ test('Checkbox should not cause layout shift when checked', async ({
     <div id="element-below">This element should not move</div>
   `);
 
-  await page.waitForSelector('ix-checkbox', { state: 'attached' });
+  await expect(page.locator('ix-checkbox')).toHaveClass(/hydrated/);
 
   const initialBounds = await page.$eval('#element-below', (el) => {
     const rect = el.getBoundingClientRect();
