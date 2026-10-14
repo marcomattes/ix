@@ -1,0 +1,1160 @@
+{
+  "$schema": "./registry.schema.json",
+  "name": "siemens-ix-registry",
+  "dist-tags": {
+    "latest": "main"
+  },
+  "versions": {
+    "main": {
+      "patterns": [
+        {
+          "name": "change-password",
+          "path": "main/patterns/change-password.json"
+        },
+        {
+          "name": "error-page",
+          "path": "main/patterns/error-page.json"
+        },
+        {
+          "name": "login-overlay",
+          "path": "main/patterns/login-overlay.json"
+        },
+        {
+          "name": "password-criteria",
+          "path": "main/patterns/password-criteria.json"
+        },
+        {
+          "name": "upload",
+          "path": "main/patterns/upload.json"
+        }
+      ],
+      "examples": [
+        {
+          "name": "about-and-legal",
+          "path": "main/examples/about-and-legal.json"
+        },
+        {
+          "name": "about-and-legal-legacy",
+          "path": "main/examples/about-and-legal-legacy.json"
+        },
+        {
+          "name": "action-card",
+          "path": "main/examples/action-card.json"
+        },
+        {
+          "name": "add-icons",
+          "path": "main/examples/add-icons.json"
+        },
+        {
+          "name": "aggrid",
+          "path": "main/examples/aggrid.json"
+        },
+        {
+          "name": "aggrid-striped",
+          "path": "main/examples/aggrid-striped.json"
+        },
+        {
+          "name": "application",
+          "path": "main/examples/application.json"
+        },
+        {
+          "name": "application-advanced",
+          "path": "main/examples/application-advanced.json"
+        },
+        {
+          "name": "application-app-switch",
+          "path": "main/examples/application-app-switch.json"
+        },
+        {
+          "name": "application-breakpoints",
+          "path": "main/examples/application-breakpoints.json"
+        },
+        {
+          "name": "application-header",
+          "path": "main/examples/application-header.json"
+        },
+        {
+          "name": "aria-label-properties",
+          "path": "main/examples/aria-label-properties.json"
+        },
+        {
+          "name": "avatar",
+          "path": "main/examples/avatar.json"
+        },
+        {
+          "name": "avatar-image",
+          "path": "main/examples/avatar-image.json"
+        },
+        {
+          "name": "avatar-initials",
+          "path": "main/examples/avatar-initials.json"
+        },
+        {
+          "name": "badge",
+          "path": "main/examples/badge.json"
+        },
+        {
+          "name": "badge-counter",
+          "path": "main/examples/badge-counter.json"
+        },
+        {
+          "name": "badge-dot",
+          "path": "main/examples/badge-dot.json"
+        },
+        {
+          "name": "badge-label",
+          "path": "main/examples/badge-label.json"
+        },
+        {
+          "name": "badge-status-icon",
+          "path": "main/examples/badge-status-icon.json"
+        },
+        {
+          "name": "basic-navigation-migration",
+          "path": "main/examples/basic-navigation-migration.json"
+        },
+        {
+          "name": "blind",
+          "path": "main/examples/blind.json"
+        },
+        {
+          "name": "blind-header-actions",
+          "path": "main/examples/blind-header-actions.json"
+        },
+        {
+          "name": "blind-variants",
+          "path": "main/examples/blind-variants.json"
+        },
+        {
+          "name": "breadcrumb",
+          "path": "main/examples/breadcrumb.json"
+        },
+        {
+          "name": "breadcrumb-next-items",
+          "path": "main/examples/breadcrumb-next-items.json"
+        },
+        {
+          "name": "breadcrumb-truncate",
+          "path": "main/examples/breadcrumb-truncate.json"
+        },
+        {
+          "name": "button-danger-primary",
+          "path": "main/examples/button-danger-primary.json"
+        },
+        {
+          "name": "button-danger-secondary",
+          "path": "main/examples/button-danger-secondary.json"
+        },
+        {
+          "name": "button-danger-tertiary",
+          "path": "main/examples/button-danger-tertiary.json"
+        },
+        {
+          "name": "button-group",
+          "path": "main/examples/button-group.json"
+        },
+        {
+          "name": "button-loading",
+          "path": "main/examples/button-loading.json"
+        },
+        {
+          "name": "button-secondary",
+          "path": "main/examples/button-secondary.json"
+        },
+        {
+          "name": "button-subtle-primary",
+          "path": "main/examples/button-subtle-primary.json"
+        },
+        {
+          "name": "button-subtle-secondary",
+          "path": "main/examples/button-subtle-secondary.json"
+        },
+        {
+          "name": "button-subtle-tertiary",
+          "path": "main/examples/button-subtle-tertiary.json"
+        },
+        {
+          "name": "button-tertiary",
+          "path": "main/examples/button-tertiary.json"
+        },
+        {
+          "name": "button-text-icon",
+          "path": "main/examples/button-text-icon.json"
+        },
+        {
+          "name": "button-with-icon",
+          "path": "main/examples/button-with-icon.json"
+        },
+        {
+          "name": "button-with-link",
+          "path": "main/examples/button-with-link.json"
+        },
+        {
+          "name": "buttons",
+          "path": "main/examples/buttons.json"
+        },
+        {
+          "name": "card",
+          "path": "main/examples/card.json"
+        },
+        {
+          "name": "card-list",
+          "path": "main/examples/card-list.json"
+        },
+        {
+          "name": "category-filter",
+          "path": "main/examples/category-filter.json"
+        },
+        {
+          "name": "category-filter-suggestions",
+          "path": "main/examples/category-filter-suggestions.json"
+        },
+        {
+          "name": "chat",
+          "path": "main/examples/chat.json"
+        },
+        {
+          "name": "chat-ai-message",
+          "path": "main/examples/chat-ai-message.json"
+        },
+        {
+          "name": "chat-input",
+          "path": "main/examples/chat-input.json"
+        },
+        {
+          "name": "chat-user-message",
+          "path": "main/examples/chat-user-message.json"
+        },
+        {
+          "name": "checkbox",
+          "path": "main/examples/checkbox.json"
+        },
+        {
+          "name": "checkbox-indeterminate",
+          "path": "main/examples/checkbox-indeterminate.json"
+        },
+        {
+          "name": "chip",
+          "path": "main/examples/chip.json"
+        },
+        {
+          "name": "content",
+          "path": "main/examples/content.json"
+        },
+        {
+          "name": "content-header",
+          "path": "main/examples/content-header.json"
+        },
+        {
+          "name": "content-header-no-back",
+          "path": "main/examples/content-header-no-back.json"
+        },
+        {
+          "name": "content-header-text-overflow",
+          "path": "main/examples/content-header-text-overflow.json"
+        },
+        {
+          "name": "content-header-with-slot",
+          "path": "main/examples/content-header-with-slot.json"
+        },
+        {
+          "name": "custom-field",
+          "path": "main/examples/custom-field.json"
+        },
+        {
+          "name": "custom-field-validation",
+          "path": "main/examples/custom-field-validation.json"
+        },
+        {
+          "name": "date-dropdown",
+          "path": "main/examples/date-dropdown.json"
+        },
+        {
+          "name": "date-dropdown-presets",
+          "path": "main/examples/date-dropdown-presets.json"
+        },
+        {
+          "name": "date-dropdown-user-range",
+          "path": "main/examples/date-dropdown-user-range.json"
+        },
+        {
+          "name": "date-input",
+          "path": "main/examples/date-input.json"
+        },
+        {
+          "name": "date-input-disabled",
+          "path": "main/examples/date-input-disabled.json"
+        },
+        {
+          "name": "date-input-label",
+          "path": "main/examples/date-input-label.json"
+        },
+        {
+          "name": "date-input-min-max-date",
+          "path": "main/examples/date-input-min-max-date.json"
+        },
+        {
+          "name": "date-input-readonly",
+          "path": "main/examples/date-input-readonly.json"
+        },
+        {
+          "name": "date-input-validation",
+          "path": "main/examples/date-input-validation.json"
+        },
+        {
+          "name": "date-input-with-slots",
+          "path": "main/examples/date-input-with-slots.json"
+        },
+        {
+          "name": "date-range",
+          "path": "main/examples/date-range.json"
+        },
+        {
+          "name": "datepicker",
+          "path": "main/examples/datepicker.json"
+        },
+        {
+          "name": "datepicker-locale",
+          "path": "main/examples/datepicker-locale.json"
+        },
+        {
+          "name": "datepicker-range",
+          "path": "main/examples/datepicker-range.json"
+        },
+        {
+          "name": "datetime-input",
+          "path": "main/examples/datetime-input.json"
+        },
+        {
+          "name": "datetime-input-disabled",
+          "path": "main/examples/datetime-input-disabled.json"
+        },
+        {
+          "name": "datetime-input-label",
+          "path": "main/examples/datetime-input-label.json"
+        },
+        {
+          "name": "datetime-input-min-max-date",
+          "path": "main/examples/datetime-input-min-max-date.json"
+        },
+        {
+          "name": "datetime-input-readonly",
+          "path": "main/examples/datetime-input-readonly.json"
+        },
+        {
+          "name": "datetime-input-validation",
+          "path": "main/examples/datetime-input-validation.json"
+        },
+        {
+          "name": "datetime-input-with-slots",
+          "path": "main/examples/datetime-input-with-slots.json"
+        },
+        {
+          "name": "datetime-range",
+          "path": "main/examples/datetime-range.json"
+        },
+        {
+          "name": "datetimepicker",
+          "path": "main/examples/datetimepicker.json"
+        },
+        {
+          "name": "datetimepicker-locale",
+          "path": "main/examples/datetimepicker-locale.json"
+        },
+        {
+          "name": "divider",
+          "path": "main/examples/divider.json"
+        },
+        {
+          "name": "drawer",
+          "path": "main/examples/drawer.json"
+        },
+        {
+          "name": "drawer-full-height",
+          "path": "main/examples/drawer-full-height.json"
+        },
+        {
+          "name": "dropdown",
+          "path": "main/examples/dropdown.json"
+        },
+        {
+          "name": "dropdown-button",
+          "path": "main/examples/dropdown-button.json"
+        },
+        {
+          "name": "dropdown-button-icon",
+          "path": "main/examples/dropdown-button-icon.json"
+        },
+        {
+          "name": "dropdown-icon",
+          "path": "main/examples/dropdown-icon.json"
+        },
+        {
+          "name": "dropdown-quick-actions",
+          "path": "main/examples/dropdown-quick-actions.json"
+        },
+        {
+          "name": "dropdown-roving-tabindex",
+          "path": "main/examples/dropdown-roving-tabindex.json"
+        },
+        {
+          "name": "dropdown-submenu",
+          "path": "main/examples/dropdown-submenu.json"
+        },
+        {
+          "name": "echarts",
+          "path": "main/examples/echarts.json"
+        },
+        {
+          "name": "echarts-bar-horizontal-stacked",
+          "path": "main/examples/echarts-bar-horizontal-stacked.json"
+        },
+        {
+          "name": "echarts-bar-simple",
+          "path": "main/examples/echarts-bar-simple.json"
+        },
+        {
+          "name": "echarts-circle",
+          "path": "main/examples/echarts-circle.json"
+        },
+        {
+          "name": "echarts-empty-state",
+          "path": "main/examples/echarts-empty-state.json"
+        },
+        {
+          "name": "echarts-gauge",
+          "path": "main/examples/echarts-gauge.json"
+        },
+        {
+          "name": "echarts-line-advanced",
+          "path": "main/examples/echarts-line-advanced.json"
+        },
+        {
+          "name": "echarts-line-multiple-y-axis",
+          "path": "main/examples/echarts-line-multiple-y-axis.json"
+        },
+        {
+          "name": "echarts-line-simple",
+          "path": "main/examples/echarts-line-simple.json"
+        },
+        {
+          "name": "echarts-pie",
+          "path": "main/examples/echarts-pie.json"
+        },
+        {
+          "name": "echarts-progress-arc",
+          "path": "main/examples/echarts-progress-arc.json"
+        },
+        {
+          "name": "echarts-progress-circle",
+          "path": "main/examples/echarts-progress-circle.json"
+        },
+        {
+          "name": "echarts-special-3d",
+          "path": "main/examples/echarts-special-3d.json"
+        },
+        {
+          "name": "echarts-special-toolbox",
+          "path": "main/examples/echarts-special-toolbox.json"
+        },
+        {
+          "name": "echarts-special-zoom",
+          "path": "main/examples/echarts-special-zoom.json"
+        },
+        {
+          "name": "empty-state",
+          "path": "main/examples/empty-state.json"
+        },
+        {
+          "name": "empty-state-compact",
+          "path": "main/examples/empty-state-compact.json"
+        },
+        {
+          "name": "empty-state-compact-break",
+          "path": "main/examples/empty-state-compact-break.json"
+        },
+        {
+          "name": "event-list",
+          "path": "main/examples/event-list.json"
+        },
+        {
+          "name": "event-list-compact",
+          "path": "main/examples/event-list-compact.json"
+        },
+        {
+          "name": "event-list-custom-item-height",
+          "path": "main/examples/event-list-custom-item-height.json"
+        },
+        {
+          "name": "event-list-custom-item-height-in-number",
+          "path": "main/examples/event-list-custom-item-height-in-number.json"
+        },
+        {
+          "name": "event-list-filled",
+          "path": "main/examples/event-list-filled.json"
+        },
+        {
+          "name": "event-list-selected",
+          "path": "main/examples/event-list-selected.json"
+        },
+        {
+          "name": "expanding-search",
+          "path": "main/examples/expanding-search.json"
+        },
+        {
+          "name": "flip-tile",
+          "path": "main/examples/flip-tile.json"
+        },
+        {
+          "name": "form-checkbox",
+          "path": "main/examples/form-checkbox.json"
+        },
+        {
+          "name": "form-checkbox-disabled",
+          "path": "main/examples/form-checkbox-disabled.json"
+        },
+        {
+          "name": "form-checkbox-group",
+          "path": "main/examples/form-checkbox-group.json"
+        },
+        {
+          "name": "form-checkbox-group-indeterminate",
+          "path": "main/examples/form-checkbox-group-indeterminate.json"
+        },
+        {
+          "name": "form-checkbox-validation",
+          "path": "main/examples/form-checkbox-validation.json"
+        },
+        {
+          "name": "form-layout-auto",
+          "path": "main/examples/form-layout-auto.json"
+        },
+        {
+          "name": "form-layout-grid",
+          "path": "main/examples/form-layout-grid.json"
+        },
+        {
+          "name": "form-validation",
+          "path": "main/examples/form-validation.json"
+        },
+        {
+          "name": "grid",
+          "path": "main/examples/grid.json"
+        },
+        {
+          "name": "grid-padding",
+          "path": "main/examples/grid-padding.json"
+        },
+        {
+          "name": "grid-size",
+          "path": "main/examples/grid-size.json"
+        },
+        {
+          "name": "group",
+          "path": "main/examples/group.json"
+        },
+        {
+          "name": "group-context-menu",
+          "path": "main/examples/group-context-menu.json"
+        },
+        {
+          "name": "group-custom-entry",
+          "path": "main/examples/group-custom-entry.json"
+        },
+        {
+          "name": "group-header-suppressed",
+          "path": "main/examples/group-header-suppressed.json"
+        },
+        {
+          "name": "html-table",
+          "path": "main/examples/html-table.json"
+        },
+        {
+          "name": "html-table-striped",
+          "path": "main/examples/html-table-striped.json"
+        },
+        {
+          "name": "icon-toggle-button-secondary",
+          "path": "main/examples/icon-toggle-button-secondary.json"
+        },
+        {
+          "name": "icon-toggle-button-subtle-primary",
+          "path": "main/examples/icon-toggle-button-subtle-primary.json"
+        },
+        {
+          "name": "icon-toggle-button-subtle-secondary",
+          "path": "main/examples/icon-toggle-button-subtle-secondary.json"
+        },
+        {
+          "name": "icon-toggle-button-subtle-tertiary",
+          "path": "main/examples/icon-toggle-button-subtle-tertiary.json"
+        },
+        {
+          "name": "icon-toggle-button-tertiary",
+          "path": "main/examples/icon-toggle-button-tertiary.json"
+        },
+        {
+          "name": "info-page",
+          "path": "main/examples/info-page.json"
+        },
+        {
+          "name": "input",
+          "path": "main/examples/input.json"
+        },
+        {
+          "name": "input-disabled",
+          "path": "main/examples/input-disabled.json"
+        },
+        {
+          "name": "input-form-validation",
+          "path": "main/examples/input-form-validation.json"
+        },
+        {
+          "name": "input-label",
+          "path": "main/examples/input-label.json"
+        },
+        {
+          "name": "input-legacy",
+          "path": "main/examples/input-legacy.json"
+        },
+        {
+          "name": "input-legacy-disabled",
+          "path": "main/examples/input-legacy-disabled.json"
+        },
+        {
+          "name": "input-legacy-readonly",
+          "path": "main/examples/input-legacy-readonly.json"
+        },
+        {
+          "name": "input-pattern",
+          "path": "main/examples/input-pattern.json"
+        },
+        {
+          "name": "input-readonly",
+          "path": "main/examples/input-readonly.json"
+        },
+        {
+          "name": "input-types",
+          "path": "main/examples/input-types.json"
+        },
+        {
+          "name": "input-validation",
+          "path": "main/examples/input-validation.json"
+        },
+        {
+          "name": "input-with-slots",
+          "path": "main/examples/input-with-slots.json"
+        },
+        {
+          "name": "key-value",
+          "path": "main/examples/key-value.json"
+        },
+        {
+          "name": "key-value-list",
+          "path": "main/examples/key-value-list.json"
+        },
+        {
+          "name": "key-value-list-striped",
+          "path": "main/examples/key-value-list-striped.json"
+        },
+        {
+          "name": "key-value-list-with-custom-value",
+          "path": "main/examples/key-value-list-with-custom-value.json"
+        },
+        {
+          "name": "key-value-list-with-icon",
+          "path": "main/examples/key-value-list-with-icon.json"
+        },
+        {
+          "name": "key-value-with-custom-value",
+          "path": "main/examples/key-value-with-custom-value.json"
+        },
+        {
+          "name": "key-value-with-icon",
+          "path": "main/examples/key-value-with-icon.json"
+        },
+        {
+          "name": "key-value-with-label-left",
+          "path": "main/examples/key-value-with-label-left.json"
+        },
+        {
+          "name": "kpi",
+          "path": "main/examples/kpi.json"
+        },
+        {
+          "name": "layout-auto",
+          "path": "main/examples/layout-auto.json"
+        },
+        {
+          "name": "layout-auto-custom",
+          "path": "main/examples/layout-auto-custom.json"
+        },
+        {
+          "name": "link-button",
+          "path": "main/examples/link-button.json"
+        },
+        {
+          "name": "link-button-disabled",
+          "path": "main/examples/link-button-disabled.json"
+        },
+        {
+          "name": "loading",
+          "path": "main/examples/loading.json"
+        },
+        {
+          "name": "map-navigation-migration",
+          "path": "main/examples/map-navigation-migration.json"
+        },
+        {
+          "name": "menu-category",
+          "path": "main/examples/menu-category.json"
+        },
+        {
+          "name": "menu-with-bottom-tabs",
+          "path": "main/examples/menu-with-bottom-tabs.json"
+        },
+        {
+          "name": "message",
+          "path": "main/examples/message.json"
+        },
+        {
+          "name": "message-bar",
+          "path": "main/examples/message-bar.json"
+        },
+        {
+          "name": "message-bar-removal",
+          "path": "main/examples/message-bar-removal.json"
+        },
+        {
+          "name": "modal",
+          "path": "main/examples/modal.json"
+        },
+        {
+          "name": "modal-by-instance",
+          "path": "main/examples/modal-by-instance.json"
+        },
+        {
+          "name": "modal-by-instance-content",
+          "path": "main/examples/modal-by-instance-content.json"
+        },
+        {
+          "name": "modal-by-template",
+          "path": "main/examples/modal-by-template.json"
+        },
+        {
+          "name": "modal-close",
+          "path": "main/examples/modal-close.json"
+        },
+        {
+          "name": "modal-form-ix-button-submit",
+          "path": "main/examples/modal-form-ix-button-submit.json"
+        },
+        {
+          "name": "modal-non-blocking",
+          "path": "main/examples/modal-non-blocking.json"
+        },
+        {
+          "name": "modal-sizes",
+          "path": "main/examples/modal-sizes.json"
+        },
+        {
+          "name": "number-input",
+          "path": "main/examples/number-input.json"
+        },
+        {
+          "name": "number-input-disabled",
+          "path": "main/examples/number-input-disabled.json"
+        },
+        {
+          "name": "number-input-label",
+          "path": "main/examples/number-input-label.json"
+        },
+        {
+          "name": "number-input-readonly",
+          "path": "main/examples/number-input-readonly.json"
+        },
+        {
+          "name": "number-input-stepper-button",
+          "path": "main/examples/number-input-stepper-button.json"
+        },
+        {
+          "name": "number-input-validation",
+          "path": "main/examples/number-input-validation.json"
+        },
+        {
+          "name": "number-input-with-slots",
+          "path": "main/examples/number-input-with-slots.json"
+        },
+        {
+          "name": "pagination",
+          "path": "main/examples/pagination.json"
+        },
+        {
+          "name": "pagination-advanced",
+          "path": "main/examples/pagination-advanced.json"
+        },
+        {
+          "name": "pane",
+          "path": "main/examples/pane.json"
+        },
+        {
+          "name": "pane-layout",
+          "path": "main/examples/pane-layout.json"
+        },
+        {
+          "name": "pill",
+          "path": "main/examples/pill.json"
+        },
+        {
+          "name": "pill-variants",
+          "path": "main/examples/pill-variants.json"
+        },
+        {
+          "name": "popover",
+          "path": "main/examples/popover.json"
+        },
+        {
+          "name": "popover-news",
+          "path": "main/examples/popover-news.json"
+        },
+        {
+          "name": "progress-indicator",
+          "path": "main/examples/progress-indicator.json"
+        },
+        {
+          "name": "progress-indicator-circular",
+          "path": "main/examples/progress-indicator-circular.json"
+        },
+        {
+          "name": "progress-indicator-circular-sizes",
+          "path": "main/examples/progress-indicator-circular-sizes.json"
+        },
+        {
+          "name": "progress-indicator-circular-status",
+          "path": "main/examples/progress-indicator-circular-status.json"
+        },
+        {
+          "name": "progress-indicator-linear-sizes",
+          "path": "main/examples/progress-indicator-linear-sizes.json"
+        },
+        {
+          "name": "progress-indicator-linear-status",
+          "path": "main/examples/progress-indicator-linear-status.json"
+        },
+        {
+          "name": "push-card",
+          "path": "main/examples/push-card.json"
+        },
+        {
+          "name": "radio",
+          "path": "main/examples/radio.json"
+        },
+        {
+          "name": "radio-button",
+          "path": "main/examples/radio-button.json"
+        },
+        {
+          "name": "radio-disabled",
+          "path": "main/examples/radio-disabled.json"
+        },
+        {
+          "name": "radio-group",
+          "path": "main/examples/radio-group.json"
+        },
+        {
+          "name": "radio-validation",
+          "path": "main/examples/radio-validation.json"
+        },
+        {
+          "name": "range-field",
+          "path": "main/examples/range-field.json"
+        },
+        {
+          "name": "select",
+          "path": "main/examples/select.json"
+        },
+        {
+          "name": "select-editable",
+          "path": "main/examples/select-editable.json"
+        },
+        {
+          "name": "select-multiple",
+          "path": "main/examples/select-multiple.json"
+        },
+        {
+          "name": "select-ng-model",
+          "path": "main/examples/select-ng-model.json"
+        },
+        {
+          "name": "select-validation",
+          "path": "main/examples/select-validation.json"
+        },
+        {
+          "name": "settings",
+          "path": "main/examples/settings.json"
+        },
+        {
+          "name": "settings-legacy",
+          "path": "main/examples/settings-legacy.json"
+        },
+        {
+          "name": "slider",
+          "path": "main/examples/slider.json"
+        },
+        {
+          "name": "slider-error",
+          "path": "main/examples/slider-error.json"
+        },
+        {
+          "name": "slider-marker",
+          "path": "main/examples/slider-marker.json"
+        },
+        {
+          "name": "slider-trace",
+          "path": "main/examples/slider-trace.json"
+        },
+        {
+          "name": "slider-validation",
+          "path": "main/examples/slider-validation.json"
+        },
+        {
+          "name": "spinner",
+          "path": "main/examples/spinner.json"
+        },
+        {
+          "name": "spinner-large",
+          "path": "main/examples/spinner-large.json"
+        },
+        {
+          "name": "split-button",
+          "path": "main/examples/split-button.json"
+        },
+        {
+          "name": "split-button-icons",
+          "path": "main/examples/split-button-icons.json"
+        },
+        {
+          "name": "tabs",
+          "path": "main/examples/tabs.json"
+        },
+        {
+          "name": "tabs-overflow",
+          "path": "main/examples/tabs-overflow.json"
+        },
+        {
+          "name": "tabs-rounded",
+          "path": "main/examples/tabs-rounded.json"
+        },
+        {
+          "name": "textarea",
+          "path": "main/examples/textarea.json"
+        },
+        {
+          "name": "textarea-disabled",
+          "path": "main/examples/textarea-disabled.json"
+        },
+        {
+          "name": "textarea-legacy",
+          "path": "main/examples/textarea-legacy.json"
+        },
+        {
+          "name": "textarea-legacy-disabled",
+          "path": "main/examples/textarea-legacy-disabled.json"
+        },
+        {
+          "name": "textarea-legacy-readonly",
+          "path": "main/examples/textarea-legacy-readonly.json"
+        },
+        {
+          "name": "textarea-readonly",
+          "path": "main/examples/textarea-readonly.json"
+        },
+        {
+          "name": "textarea-rows-cols",
+          "path": "main/examples/textarea-rows-cols.json"
+        },
+        {
+          "name": "textarea-validation",
+          "path": "main/examples/textarea-validation.json"
+        },
+        {
+          "name": "theme-switcher",
+          "path": "main/examples/theme-switcher.json"
+        },
+        {
+          "name": "tile",
+          "path": "main/examples/tile.json"
+        },
+        {
+          "name": "time-input",
+          "path": "main/examples/time-input.json"
+        },
+        {
+          "name": "time-input-disabled",
+          "path": "main/examples/time-input-disabled.json"
+        },
+        {
+          "name": "time-input-label",
+          "path": "main/examples/time-input-label.json"
+        },
+        {
+          "name": "time-input-readonly",
+          "path": "main/examples/time-input-readonly.json"
+        },
+        {
+          "name": "time-input-validation",
+          "path": "main/examples/time-input-validation.json"
+        },
+        {
+          "name": "time-input-with-slots",
+          "path": "main/examples/time-input-with-slots.json"
+        },
+        {
+          "name": "time-range",
+          "path": "main/examples/time-range.json"
+        },
+        {
+          "name": "timepicker",
+          "path": "main/examples/timepicker.json"
+        },
+        {
+          "name": "timepicker-format-adjusted",
+          "path": "main/examples/timepicker-format-adjusted.json"
+        },
+        {
+          "name": "timepicker-intervals",
+          "path": "main/examples/timepicker-intervals.json"
+        },
+        {
+          "name": "timepicker-min-max-time",
+          "path": "main/examples/timepicker-min-max-time.json"
+        },
+        {
+          "name": "toast",
+          "path": "main/examples/toast.json"
+        },
+        {
+          "name": "toast-custom",
+          "path": "main/examples/toast-custom.json"
+        },
+        {
+          "name": "toast-position",
+          "path": "main/examples/toast-position.json"
+        },
+        {
+          "name": "toggle",
+          "path": "main/examples/toggle.json"
+        },
+        {
+          "name": "toggle-button-primary",
+          "path": "main/examples/toggle-button-primary.json"
+        },
+        {
+          "name": "toggle-button-secondary",
+          "path": "main/examples/toggle-button-secondary.json"
+        },
+        {
+          "name": "toggle-button-subtle-primary",
+          "path": "main/examples/toggle-button-subtle-primary.json"
+        },
+        {
+          "name": "toggle-button-subtle-secondary",
+          "path": "main/examples/toggle-button-subtle-secondary.json"
+        },
+        {
+          "name": "toggle-button-subtle-tertiary",
+          "path": "main/examples/toggle-button-subtle-tertiary.json"
+        },
+        {
+          "name": "toggle-button-tertiary",
+          "path": "main/examples/toggle-button-tertiary.json"
+        },
+        {
+          "name": "toggle-checked",
+          "path": "main/examples/toggle-checked.json"
+        },
+        {
+          "name": "toggle-custom-label",
+          "path": "main/examples/toggle-custom-label.json"
+        },
+        {
+          "name": "toggle-disabled",
+          "path": "main/examples/toggle-disabled.json"
+        },
+        {
+          "name": "toggle-indeterminate",
+          "path": "main/examples/toggle-indeterminate.json"
+        },
+        {
+          "name": "toggle-ng-model",
+          "path": "main/examples/toggle-ng-model.json"
+        },
+        {
+          "name": "tooltip",
+          "path": "main/examples/tooltip.json"
+        },
+        {
+          "name": "tooltip-with-icon",
+          "path": "main/examples/tooltip-with-icon.json"
+        },
+        {
+          "name": "tree",
+          "path": "main/examples/tree.json"
+        },
+        {
+          "name": "tree-custom",
+          "path": "main/examples/tree-custom.json"
+        },
+        {
+          "name": "upload",
+          "path": "main/examples/upload.json"
+        },
+        {
+          "name": "validation",
+          "path": "main/examples/validation.json"
+        },
+        {
+          "name": "validation-select",
+          "path": "main/examples/validation-select.json"
+        },
+        {
+          "name": "vertical-tabs",
+          "path": "main/examples/vertical-tabs.json"
+        },
+        {
+          "name": "vertical-tabs-with-avatar",
+          "path": "main/examples/vertical-tabs-with-avatar.json"
+        },
+        {
+          "name": "workflow",
+          "path": "main/examples/workflow.json"
+        },
+        {
+          "name": "workflow-vertical",
+          "path": "main/examples/workflow-vertical.json"
+        }
+      ],
+      "components": {
+        "componentDoc": "main/ix/component-doc.json",
+        "componentRelatedExamples": "main/ix/component-related-examples.json",
+        "componentRelatedPatterns": "main/ix/component-related-patterns.json"
+      },
+      "documentationSearchIndex": "main/documentation-search-index.json",
+      "llms": {
+        "entrypoint": "main/llms.txt",
+        "components": "main/llms/components.md",
+        "examples": "main/llms/examples.md",
+        "patterns": "main/llms/patterns.md",
+        "catalog": "main/llms/catalog.md",
+        "figma": "main/llms/figma.md",
+        "exampleIndexes": {
+          "angular": "main/llms/examples/angular.md",
+          "angular-standalone": "main/llms/examples/angular-standalone.md",
+          "html": "main/llms/examples/html.md",
+          "react": "main/llms/examples/react.md",
+          "vue": "main/llms/examples/vue.md"
+        }
+      }
+    }
+  }
+}

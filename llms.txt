@@ -1,0 +1,41 @@
+# Siemens iX Registry
+
+> Root LLM entrypoint for all deployed Siemens iX registries. Use this file to choose a registry version, then open that version's own llms.txt for focused component, example, and pattern context.
+
+Check the version of "iX" you are using in your project and select the corresponding registry version below for the most compatible LLM context e.g if @siemens/ix-react version 5.0.0 is installed, the 5.0.0 registry version will likely have the most relevant and accurate LLM context.
+
+Recommended flow: choose a version, open its versioned llms.txt, then open the component catalog to choose components, component detail docs for exact API usage, per-framework example indexes for practical framework code, or pattern docs for complete copyable UI patterns. Everything is plain Markdown that can be read or fetched without tooling.
+
+Component docs contain properties, events, slots, documentation links, related examples, Figma main component IDs, and relationship availability. Figma IDs identify design-system counterparts and should be used for mapping design resources to iX components, not as runtime APIs.
+
+Example docs contain related iX components, framework variants, and source files so examples can be found without first navigating through component docs.
+
+Pattern docs describe copyable multi-file UI patterns built with iX packages, including previews, framework variants, files, and component usage availability.
+
+If a relationship is marked unavailable in a linked file, do not infer it; the registry JSON does not provide that relationship.
+
+Latest registry tag: main.
+
+## Registry versions
+
+- [main](main/llms.txt): Versioned Siemens iX registry LLM entrypoint. Tags: latest.
+
+## Component catalogs
+
+- [main catalog](main/llms/catalog.md): Compact one-line-per-component list with React/Vue names and Figma IDs for main.
+
+## Component docs
+
+- [main components](main/llms/components.md): Component API, examples, Figma IDs, and relationship availability for main.
+
+## Example docs
+
+- [main examples](main/llms/examples.md): Registry examples with related iX components, framework variants, and source files for main.
+
+## Pattern docs
+
+- [main patterns](main/llms/patterns.md): Registry pattern metadata, variants, files, and component usage availability for main.
+
+## Optional
+
+- [Registry manifest](registry.json): Machine-readable manifest containing all deployed registry versions and dist-tags.
